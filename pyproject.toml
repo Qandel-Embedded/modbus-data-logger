@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "modbus-data-logger"
+version = "1.0.0"
+description = "CLI tool to log Modbus RTU/TCP registers to CSV or SQLite"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [{name = "Ahmed Qandel", email = "contact@ahmedqandel.com"}]
+requires-python = ">=3.9"
+dependencies = ["pymodbus>=3.5", "click>=8.0"]
+keywords = ["modbus", "plc", "scada", "data-logging", "industrial"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Topic :: System :: Hardware",
+    "License :: OSI Approved :: MIT License",
+]
+
+[project.scripts]
+modbus-log = "modbus_data_logger.cli:main"
+
+[project.urls]
+Homepage = "https://ahmedqandel.com"
+Repository = "https://github.com/Qandel-Embedded/modbus-data-logger"
